@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: brown;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+
+.gamecontainer{
+    background-color: burlywood;
+    position: relative;
+    height: 800px;
+    width: 800px;
+    outline: 10px solid black;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.gamecanvas{
+    background-color: antiquewhite;
+}
