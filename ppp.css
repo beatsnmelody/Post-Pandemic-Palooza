@@ -2,23 +2,31 @@
     box-sizing: border-box;
 }
 
-body {
+body{
     background-color: brown;
     padding: 0px;
     margin: 0px;
     overflow: hidden;
 }
 
-.gamecontainer{
-    background-color: burlywood;
+h1{
+    display: flex;
+    font-size: 50px;
+    font-weight: bold;
     position: relative;
+    margin: 0 auto;
+    margin: bottom 20px;
+    padding: 0 auto;
+    justify-content: center;
+}
+
+.gamecontainer{
+    position: relative;
+    margin: 0 auto;
+    padding: 0 auto;
+    margin-top: 20px;
+    background-color: bisque;
     height: 800px;
     width: 800px;
     outline: 10px solid black;
-    margin: 0 auto;
-    margin-top: 20px;
-}
-
-.gamecanvas{
-    background-color: antiquewhite;
 }

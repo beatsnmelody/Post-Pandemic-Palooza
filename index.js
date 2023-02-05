@@ -1,25 +1,29 @@
-class overworld {
-    constructor(config){
-        document.getElementsByClassName("gamecontainer", "gamecanvas");
-        this.element = config.element;
-        // this.canvas = this.element.querySelector(yay);
-        this.context = this.canvas.getContext("2d");
+const canvas = document.querySelector('gamecanvas');
+const c = canvas.getContext('2d');
+
+canvas.width = 800;
+canvas.height = 800;
+
+c.fillRect (0, 0, canvas.width, canvas.height);
+
+const background = new Sprite({
+    imageSrc : '.Post-Pandemic-Palooza/overworld placeholder.png'
+})
+
+class Sprite {
+    constructor({position, imageSrc}){
+        this.position = position;
+        this.width = 800;
+        this.height =800;
+        this.image = newImage()
+        this.image.src = imageSrc
     }
-    init() {
-        const image = new Image();
-        image.onload = () => {
-            this.context.drawImage(image, 0, 0);
-        };
-        image.src = "overworld placeholder.png";
+
+    draw(){
+        c.drawImage(this.image, this.position.x, this.position.y);
+    }
+
+    update() {
+        this.draw()
     }
 }
-
-function mapDraw() {
-    const ovrwrld = new overworld({
-        element: document.getElementsByClassName("gamecontainer")
-    });
-
-    ovrwrld.init();
-}
-
-mapDraw();
